@@ -4,11 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>브레이브걸스 퀴즈</title>
+		<title>엑소 퀴즈</title>
 	</head>
 
 	<body>
-		<a href="https://sheck.netlify.app"><button id="home">sheck</button></a>
+		<a href="https://sheck.netlify.app"><button id="home">Sheck</button></a>
 		<!-- Main page -->
 		<div class="main">
 			<!-- Number of Question  -->
@@ -61,45 +61,45 @@
 			// Creating questionss and answers
 			//*****************************************************************************
 			var question1 = {
-				question: '꼬북좌 별명을 가진 맴버는 누구인가요 ?',
-				answers: ['유정', '민영', '은지', '유나'],
-				correct: 0,
+				question: '엑소 데뷔일은 언제 인가요?',
+				answers: ['2012년 4월 5일', '2012년 4월 6일', '2012년 4월 7일', '2012년 4월 8일'],
+				correct: 3,
 			};
 
 			var question2 = {
-				question: '단발좌 별명을 가진 맴버는 누구인가요?',
-				answers: ['유정', '민영', '은지', '유나'],
+				question: '엑소 뜻은 무엇인가요?',
+				answers: ['미지의 세계에서 온 별', '숨은 보석', '세계로 나가자'],
 				correct: 0,
 			};
 
 			var question3 = {
-				question: '왕눈좌 별명을 가진 맴버는 누구인가요?',
-				answers: ['유정', '민영', '은지', '유나'],
+				question: '엑소의 리더는 누구인가요?',
+				answers: ['카이', '백현', '수호', '첸'],
 				correct: 2,
 			};
 
 			var question4 = {
-				question: '메보좌 별명을 가진 맴버는 누구인가요?',
-				answers: ['유정', '민영', '은지', '유나'],
-				correct: 3,
+				question: '엑소에서 맏형은 누구인가요?',
+				answers: ['백현', '시우민', '디오', '카이'],
+				correct: 1,
 			};
 
 			var question5 = {
-				question: '브레이브걸스는 언제부터 현재의 맴버로 4인조 그룹으로 활동했나요?',
-				answers: ['2016년', '2017년', '2018년', '2019년'],
-				correct: 2,
-			};
-
-			var question6 = {
-				question: '롤린은 언제부터 역주행이 시작됐나요?',
-				answers: ['2021년 2월 27일', '2021년 2월 29일', '2021년 3월 1일', '2021년 3월 4일'],
+				question: '다음 중 엑소 맴버가 출연하지 않은 드라마난 영화는 무엇인가요?',
+				answers: ['미워도 사랑해', '달의 연인 보보경심려', '도전에 반하다', '신과 함께'],
 				correct: 0,
 			};
 
+			var question6 = {
+				question: '문제적 남자에 나온 엑소 맴버는 누구인가요?',
+				answers: ['첸', '카이', '백현', '수호'],
+				correct: 3,
+			};
+
 			var question7 = {
-				question: '브레이브걸스(현 맴버)에서 맏언니는 누구인가요?',
-				answers: ['유정', '민영', '은지', '유나'],
-				correct: 1,
+				question: '엑소의 팬덤 이름은 무엇인가요?',
+				answers: ['엑소 엘', '플래닛', '엘'],
+				correct: 0,
 			};
 
 			// create an array of objects
@@ -218,7 +218,7 @@
 
 				// check that an answer has been selected
 				if (selectedItem == undefined) {
-					alert('정답을 골라주세요!');
+					alert('Please selected an answer!');
 					return;
 				} else {
 					// get user answer if form of text
