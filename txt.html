@@ -2,89 +2,120 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>브레이브걸스 퀴즈</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>투바투 퀴즈</title>
 </head>
 
 <body>
-    <a href="https://sheck.netlify.app"><button id="home">sheck</button></a>
-    <!-- Main page -->
+    <a href="https://sheck.netlify.app"><button id="home">Sheck</button></a>
     <div class="main">
         <!-- Number of Question  -->
-        <div class="wrapper" id="pages">
-            <span id="quizNumber">1</span><span>/7</span>
-        </div>
+        <div class="wrapper" id="pages"><span id="quizNumber">1</span><span>/7</span></div>
 
         <!-- Quiz Question -->
         <div class="quiz-questions" id="display-area">
             <p id="question"></p>
-            <ul id="answer">
-            </ul>
+            <ul id="answer"></ul>
 
             <div id="quiz-results">
-                <button type="button" name="button" class="submit" id="submit">Submit</button>
+                <button type="button" name="button" class="submit" id="submit">submit</button>
             </div>
         </div>
-
     </div>
-
     <canvas id="canvas"></canvas>
+    <div id="disqus_thread" class="comments"></div>
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+        (function () {
+            // DON'T EDIT BELOW THIS LINE
+            var d = document,
+                s = d.createElement('script');
+            s.src = 'https://tern-idol-quiz.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>$(function () {
-            $(question).selectable();
-        });</script>
     <script>
-
+        $(function () {
+            $(question).selectable();
+        });
+    </script>
+    <script>
         // Creating questionss and answers
         //*****************************************************************************
         var question1 = {
-            question: '블랙핑크 데뷔일은 언제 인가요?',
-            answers: ['2016년 8월 6일', '2016년 8월 7일', '2016년 8월 8일', '2016년 8월 9일'],
-            correct: 2
+            question: '투바투의 데뷔일은 언제인가요?',
+            answers: ['2019년 2월 19일', '2019년 2월 24일', '2019년 3월 1일', '2019년 3월 4일'],
+            correct: 1,
         };
 
         var question2 = {
-            question: '블랙핑크 첫 음방 1위 곡은 무엇인가요?',
-            answers: ['휘파람', '불장난', '마지막처럼', '붐바야'],
-            correct: 1
+            question: '투바투의 엠카 첫 1위 곡은 무엇인가요?',
+            answers: ['어느 날 머리에서 뿔이 자랐다', 'cat&dog', '9와 4분의 3 승강자에서 너를 기다려', '피땀눈물'],
+            correct: 0,
         };
 
         var question3 = {
-            question: '블랙핑크는 yg에서 몇년만에 나온 걸그룹인가요?',
-            answers: ['6년', '7년', '8년', '9년'],
-            correct: 1
-        }
+            question: '투바투에서 맏형은 누구인가요?',
+            answers: ['수빈', '연준', '범규', '태현', '휴닝카이'],
+            correct: 1,
+        };
 
         var question4 = {
-            question: '블랙핑크에서 막내 라인은 누구인가요?',
-            answers: ['로제&지수', '제니&리사', '지수&제니', '로제&리사'],
-            correct: 3
+            question: '투마로우 바이 투게더는 무슨 뜻인가요?',
+            answers: [
+                '내일도 너와 합께 한다',
+                '매일 매일 새로운 나와 함께한다',
+                '내일까지 우린 함께 한다',
+                '‘서로 다른 너와 내가 하나의 꿈으로 모여 함께 내일을 만들어간다',
+            ],
+            correct: 2,
         };
 
         var question5 = {
-            question: '블랙핑크에서 외국인이거나 외국에서 살았던 맴머는 몇명인가요?',
-            answers: ['0', '1', '2', '3', '4'],
-            correct: 3
+            question: '투바투의 뮤비 중 조회수가 가장 높은 뮤비는 무엇인가요?',
+            answers: ['세께가 불타버린 밤, 우린', '5시 3분의 하늘에서 발견한 너와 나', '9와 4분의 3의 승강장에서 너를 기다려', '어느 날 머리에서 뿔이 자랐다'],
+            correct: 0,
         };
 
         var question6 = {
-            question: '블랙핑크에는 리더는 누구인가요?',
-            answers: ['지수', '제니', '없다'],
-            correct: 1
+            question: "투모로우바이투게더의 데뷔일을 기념하기 위해 빅히트에서 주최하는 축제는 무엇인가요?",
+            answers: ['wishes season', 'today', 'dream week'],
+            correct: 2,
         };
 
         var question7 = {
-            question: '블랙핑크의 팬덤 이름은 무엇인가요?',
-            answers: ['핑크', '스페셜', '블링크'],
-            correct: 2
+            question: "'단짝즈' 케미를 보여준 투바투 맴버들은 누구인가요",
+            answers: ['태현&휴닝카이', '연준&범규', '범규&휴닝카이','수빈&범규'],
+            correct: 0,
         };
 
         // create an array of objects
 
-        var questions = [question1, question2, question3, question4, question5, question6, question7];
+        var questions = [
+            question1,
+            question2,
+            question3,
+            question4,
+            question5,
+            question6,
+            question7,
+        ];
 
         // Initialize variables
         //------------------------------------------------------------------
@@ -94,7 +125,6 @@
         var liTagsid = [];
         var correctAns = 0;
         var quizPage = 1;
-
 
         var currentIndex = 0;
         var currentQuestion = questions[currentIndex];
@@ -110,11 +140,9 @@
         //if I want to change it, I have to change it one place
         var classHighlight = 'selected';
 
-
         // Display Answers and hightlight selected item
         //------------------------------------------------------------------
         function showQuestions() {
-
             if (currentIndex != 0) {
                 // create again submit button only for next pages
                 ulTag.innerHTML = '';
@@ -127,13 +155,13 @@
             }
 
             //Display Results in the final page
-            if (currentIndex == (questions.length)) {
+            if (currentIndex == questions.length) {
                 ulTag.innerHTML = '';
                 document.getElementById('question').innerHTML = '';
 
                 showResults();
 
-                return
+                return;
             }
 
             questionTitle.innerHTML = currentQuestion.question;
@@ -144,7 +172,7 @@
                 // creating answers
                 var newAns = document.createElement('li');
                 newAns.id = 'ans' + (i + 1);
-                newAns.className = "notSelected";
+                newAns.className = 'notSelected';
                 var textAns = document.createTextNode(currentQuestion.answers[i]);
                 newAns.appendChild(textAns);
                 var addNewAnsHere = document.getElementById('answer');
@@ -152,7 +180,6 @@
 
                 console.log(currentQuestion.answers[i]);
             }
-
 
             //.click() will return the result of $('.notSelected')
             var $liTags = $('.notSelected').click(function (list) {
@@ -167,7 +194,7 @@
                 //get id name of clicked answer
                 for (var i = 0; i < currentQuestion.answers.length; i++) {
                     // console.log(liTagsid[i]);
-                    if ($liTags[i].className == "notSelected selected") {
+                    if ($liTags[i].className == 'notSelected selected') {
                         //store information to check answer
                         tags = $liTags[i].id;
                         // tagsClass = $LiTags.className;
@@ -178,12 +205,13 @@
             });
 
             //check answer once it has been submitted
-            button.onclick = function () { checkAnswer() };
+            button.onclick = function () {
+                checkAnswer();
+            };
         }
 
         //self calling function
         showQuestions();
-
 
         // Show Correct Answer
         //------------------------------------------------------------------
@@ -193,8 +221,8 @@
 
             // check that an answer has been selected
             if (selectedItem == undefined) {
-                alert("정답을 골라주세요")
-                return
+                alert('정답을 골라주세요!   ');
+                return;
             } else {
                 // get user answer if form of text
                 var userAns = selectedItem.innerHTML;
@@ -202,14 +230,17 @@
 
             // change the background of the answer according to the Results
             if (userAns == currentQuestion.answers[currentQuestion.correct]) {
-                console.log("Correct! The answer is: " + userAns);
+                console.log('Correct! The answer is: ' + userAns);
                 // change color of selected item by changing className
                 selectedItem.className = 'correct';
                 // count the number of correct answers
                 correctAns++;
                 console.log(correctAns);
             } else {
-                console.log("Wrong! The corrent answer is: " + currentQuestion.answers[currentQuestion.correct]);
+                console.log(
+                    'Wrong! The corrent answer is: ' +
+                    currentQuestion.answers[currentQuestion.correct]
+                );
                 //change the background of the wrong answer
                 selectedItem.className = 'wrong';
                 //hightlight the right answer if the user got it wrong
@@ -230,8 +261,10 @@
             currentQuestion = questions[currentIndex];
 
             // Start with the next question once the "Next" button has been clicked
-            button.onclick = function () { showQuestions() };
-            return
+            button.onclick = function () {
+                showQuestions();
+            };
+            return;
         }
 
         // Final score
@@ -250,7 +283,6 @@
             newInfo.id = 'circle';
             newInfo.className = 'circle';
 
-
             //Create a Div for the fill element
             var newDiv = document.createElement('div');
             newDiv.className = 'fill';
@@ -260,49 +292,64 @@
             // add the score to the circle
             var newScore = document.createElement('h3');
             newScore.className = 'score';
-            var textScore = document.createTextNode(Math.floor((correctAns / questions.length) * 100) + '%');
+            var textScore = document.createTextNode(
+                Math.floor((correctAns / questions.length) * 100) + '%'
+            );
             newScore.appendChild(textScore);
             addHere.appendChild(newScore);
 
             //use jquary to grab the text of the score
-            var score = $(".score").text();
+            var score = $('.score').text();
 
             //fill the circle in base of the score
-            $(".fill").css("height", score);
+            $('.fill').css('height', score);
 
             if (correctAns >= 5) {
                 var newCongrats = document.createElement('p');
-                var textCongrats = document.createTextNode('Congratulations! You did a Good Job!')
+                var textCongrats = document.createTextNode(
+                    'Congratulations! You did a Good Job!'
+                );
                 newCongrats.appendChild(textCongrats);
                 document.getElementById('display-area').appendChild(newCongrats);
 
                 confettiEffect();
             }
-
         }
 
         // Confetti Effect by Gtibo "Confetti Party"
         //------------------------------------------------------------------
         function confettiEffect() {
             //grabing area to create the effect
-            canvas = document.getElementById("canvas");
-            context = canvas.getContext("2d");
+            canvas = document.getElementById('canvas');
+            context = canvas.getContext('2d');
             width = canvas.width = window.innerWidth;
             height = canvas.height = window.innerHeight;
 
             // creating the tabel
             particle = [];
-            particleCount = 0,
-                gravity = 0.3,
-                colors = [
-                    '#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5',
-                    '#2196f3', '#03a9f4', '#00bcd4', '#009688', '#4CAF50',
-                    '#8BC34A', '#CDDC39', '#FFEB3B', '#FFC107', '#FF9800',
-                    '#FF5722', '#795548'
-                ];
+            (particleCount = 0),
+                (gravity = 0.3),
+                (colors = [
+                    '#f44336',
+                    '#e91e63',
+                    '#9c27b0',
+                    '#673ab7',
+                    '#3f51b5',
+                    '#2196f3',
+                    '#03a9f4',
+                    '#00bcd4',
+                    '#009688',
+                    '#4CAF50',
+                    '#8BC34A',
+                    '#CDDC39',
+                    '#FFEB3B',
+                    '#FFC107',
+                    '#FF9800',
+                    '#FF5722',
+                    '#795548',
+                ]);
 
             for (var i = 0; i < 300; i++) {
-
                 particle.push({
                     x: width / 2,
                     y: height / 2,
@@ -326,7 +373,12 @@
                         context.fillStyle = this.color;
                         context.beginPath();
 
-                        context.fillRect(this.boxW / 2 * -1, this.boxH / 2 * -1, this.boxW, this.boxH);
+                        context.fillRect(
+                            (this.boxW / 2) * -1,
+                            (this.boxH / 2) * -1,
+                            this.boxW,
+                            this.boxH
+                        );
                         context.fill();
                         context.closePath();
                         context.restore();
@@ -340,18 +392,18 @@
                         if (this.y < 0) {
                             this.velY *= -0.2;
                             this.velX *= 0.9;
-                        };
+                        }
 
                         if (this.y > height) {
                             this.anglespin = 0;
                             this.y = height;
                             this.velY *= -0.2;
                             this.velX *= 0.9;
-                        };
+                        }
 
                         if (this.x > width || this.x < 0) {
                             this.velX *= -0.5;
-                        };
+                        }
                     },
                 });
             }
@@ -364,7 +416,7 @@
             }
 
             function loadImage(url) {
-                var img = document.createElement("img");
+                var img = document.createElement('img');
                 img.src = url;
                 return img;
             }
@@ -390,31 +442,30 @@
             }
 
             function drawStar(cx, cy, spikes, outerRadius, innerRadius, color) {
-                var rot = Math.PI / 2 * 3;
+                var rot = (Math.PI / 2) * 3;
                 var x = cx;
                 var y = cy;
                 var step = Math.PI / spikes;
 
-                context.strokeSyle = "#000";
+                context.strokeSyle = '#000';
                 context.beginPath();
-                context.moveTo(cx, cy - outerRadius)
+                context.moveTo(cx, cy - outerRadius);
                 for (i = 0; i < spikes; i++) {
                     x = cx + Math.cos(rot) * outerRadius;
                     y = cy + Math.sin(rot) * outerRadius;
-                    context.lineTo(x, y)
-                    rot += step
+                    context.lineTo(x, y);
+                    rot += step;
 
                     x = cx + Math.cos(rot) * innerRadius;
                     y = cy + Math.sin(rot) * innerRadius;
-                    context.lineTo(x, y)
-                    rot += step
+                    context.lineTo(x, y);
+                    rot += step;
                 }
 
-                context.lineTo(cx, cy - outerRadius)
+                context.lineTo(cx, cy - outerRadius);
                 context.closePath();
                 context.fillStyle = color;
                 context.fill();
-
             }
         }
     </script>
@@ -427,7 +478,7 @@
 
         #home {
             color: #db3c3c;
-            background-color: #8C25D7;
+            background-color: #f0f8ff;
             font-size: 53px;
             font-style: inherit;
             border: none;
@@ -438,13 +489,13 @@
             margin: 0 auto;
             font-family: 'Lato', sans-serif;
             color: #b3b3b3;
-            background-color: #7d33d1;
+            background-color: #f0f8ff;
             text-align: center;
             margin-top: 0;
         }
 
         .main {
-            background-color: white;
+            background-color: #ffffff;
             margin: 0 auto;
             width: 60%;
             margin-top: 30px;
@@ -482,17 +533,17 @@
         }
 
         li:hover {
-            background: #ECEEF0;
+            background: #eceef0;
         }
 
         .selected,
         .selected:hover {
-            background: #FFDEAD;
+            background: #ffdead;
         }
 
         .correct,
         .correct:hover {
-            background: #9ACD32;
+            background: #9acd32;
             color: white;
         }
 
@@ -504,25 +555,24 @@
         }
 
         .main button {
-            font-family: "Roboto", sans-serif;
+            font-family: 'Roboto', sans-serif;
             text-transform: uppercase;
             width: 20%;
             border: none;
             padding: 15px;
-            color: #FFFFFF;
+            color: #ffffff;
         }
 
         .submit:hover,
         .submit:active,
         .submit:focus {
-            background: #43A047;
+            background: #43a047;
         }
 
         .submit {
-            background: #4CAF50;
+            background: #4caf50;
             min-width: 120px;
         }
-
 
         .next {
             background: #fa994a;
@@ -536,7 +586,7 @@
         }
 
         .restart {
-            background-color: #FFFFFF
+            background-color: #ffffff;
         }
 
         /*========================================================
