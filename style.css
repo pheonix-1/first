@@ -90,6 +90,8 @@ a {
 
     #main {
         display: flex;
+        align-items: center;
+        padding-right: none;
     }
 
     .icon {
@@ -181,6 +183,10 @@ h1 {
     margin-left: 300px;
     margin-right: 300px;
     margin-top: 0 auto;
+}
+
+#main:hover {
+    background-color: rgb(241, 204, 255);
 }
 
 body {
