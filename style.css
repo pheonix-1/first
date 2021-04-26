@@ -2,11 +2,16 @@
     --text-color: #424242;
     --backgoround-color: #d1c4e9;
     --white-color: #ffffff;
+    --google-fonts: 'Orelega One', cursive;
 }
 
 body {
     margin: 0;
     font-family: 'Noto Sans JP', sans-serif;
+}
+
+h2 {
+    font-family: var(--google-fonts);
 }
 
 a {
