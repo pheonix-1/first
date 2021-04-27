@@ -7,7 +7,7 @@
 
 body {
     margin: 0;
-    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #fff0f5;
 }
 
 h2 {
@@ -190,10 +190,12 @@ h1 {
     margin-top: 0 auto;
 }
 
-#option li:hover {
-    background-color: rgb(241, 204, 255);
-}
-
-body {
-    background-color: #fff0f5;
+.more {
+    align-items: center;
+    background-color: darkslategray;
+    padding: 30px 60px;
+    align-items: center;
+    color: var(--white-color);
+    font-family: var(--google-fonts);
+    font-size: 24px;
 }

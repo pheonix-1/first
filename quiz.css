@@ -1,0 +1,158 @@
+:root {
+    --font-family: 'Lato', sans-serif
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#home {
+    color: #db3c3c;
+    background-color: #f0f8ff;
+    font-size: 53px;
+    font-style: inherit;
+    border: none;
+    font-weight: 700;
+}
+
+body {
+    margin: 0 auto;
+    font-family: var(--font-family);
+    color: #b3b3b3;
+    background-color: #f0f8ff;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: var(--font-family);
+}
+
+.main {
+    background-color: #ffffff;
+    margin: 0 auto;
+    width: 60%;
+    margin-top: 30px;
+    padding: 30px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+span {
+    float: left;
+}
+
+span {
+    float: left;
+}
+
+p {
+    padding: 10px 10px 0;
+}
+
+/*Form area width*/
+.form-area,
+ul {
+    margin: 20px auto;
+    max-width: 550px;
+}
+
+li {
+    list-style-type: none;
+    text-align: left;
+    background-color: transparent;
+    margin: 10px 5px;
+    padding: 5px 10px;
+    border: 1px solid lightgray;
+    font-weight: normal;
+}
+
+li:hover {
+    background: #eceef0;
+}
+
+.selected,
+.selected:hover {
+    background: #ffdead;
+}
+
+.correct,
+.correct:hover {
+    background: #9acd32;
+    color: white;
+}
+
+/*change wrong answer background*/
+.wrong,
+.wrong:hover {
+    background: #db3c3c;
+    color: white;
+}
+
+.main button {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    width: 20%;
+    border: none;
+    padding: 15px;
+    color: #ffffff;
+}
+
+.submit:hover,
+.submit:active,
+.submit:focus {
+    background: #43a047;
+}
+
+.submit {
+    background: #4caf50;
+    min-width: 120px;
+}
+
+.next {
+    background: #fa994a;
+    min-width: 120px;
+}
+
+.next:hover,
+.next:active,
+.next:focus {
+    background: #e38a42;
+}
+
+.restart {
+    background-color: #ffffff;
+}
+
+/*========================================================
+Results
+========================================================*/
+.circle {
+    position: relative;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    background: #bdc3c7;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+#addthis {
+    padding-top: 10px;
+}
+
+.fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background: #31a2ac;
+}
+
+.circle p {
+    margin: 400px;
+}
