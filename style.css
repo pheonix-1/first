@@ -96,7 +96,7 @@ a {
     #main {
         display: flex;
         align-items: center;
-        padding-right: none;
+        width: 100%;
     }
 
     .icon {

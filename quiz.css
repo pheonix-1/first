@@ -164,20 +164,3 @@ Results
 .circle p {
     margin: 400px;
 }
-
-.go {
-    align-items: center;
-}
-
-.use {
-    display: none;
-}
-
-i {
-    size: 14px;
-    color: dimgrey;
-}
-
-.use.active {
-    display: block;
-}
