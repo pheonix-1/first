@@ -8,12 +8,12 @@
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-607ed432614148b9"></script>
     <link rel="stylesheet" href="quiz.css">
-    <title>투바투 퀴즈</title>
+    <title>소년시대 퀴즈</title>
 </head>
 
 <body>
     <a href="https://sheck.netlify.app"><button id="home">Sheck</button></a>
-    <h2 class="quiz-name">나는 투바투를 얼마나 알까?</h2>
+    <h2 class="quiz-name">나는 소녀시대를 얼마나 알까?</h2>
     <div class="main">
         <!-- Number of Question  -->
         <div class="wrapper" id="pages"><span id="quizNumber">1</span><span>/7</span></div>
@@ -29,7 +29,7 @@
         </div>
 
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
-        <div class="addthis_inline_share_toolbox"></div>
+        <div id="addthis" class="addthis_inline_share_toolbox"></div>
 
     </div>
 
@@ -67,49 +67,45 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
         // Creating questionss and answers
         //*****************************************************************************
         var question1 = {
-            question: '투바투의 데뷔일은 언제인가요?',
-            answers: ['2019년 2월 19일', '2019년 2월 24일', '2019년 3월 1일', '2019년 3월 4일'],
+            question: '소녀시대의 데뷔일은 언제인가요?',
+            answers: ['2007년 8월 5일'],
             correct: 1,
         };
 
         var question2 = {
-            question: '투바투의 엠카 첫 1위 곡은 무엇인가요?',
-            answers: ['어느 날 머리에서 뿔이 자랐다', 'cat&dog', '9와 4분의 3 승강자에서 너를 기다려', '피땀눈물'],
-            correct: 0,
+            question: '소녀시대의 데뷔곡은 무엇인가요',
+            answers: ['다시 만난 세계'],
+            correct: 3,
         };
 
         var question3 = {
-            question: '투바투에서 맏형은 누구인가요?',
-            answers: ['수빈', '연준', '범규', '태현', '휴닝카이'],
-            correct: 1,
+            question: '소녀시대의 리더는 누구인가요?',
+            answers: ['태연'],
+            correct: 0,
         };
 
         var question4 = {
-            question: '투마로우 바이 투게더는 무슨 뜻인가요?',
-            answers: [
-                '내일도 너와 합께 한다',
-                '매일 매일 새로운 나와 함께한다',
-                '서로 다른 너와 내가 하나의 꿈으로 모여 함께 내일을 만들어간다',
-            ],
-            correct: 2,
+            question: '소녀시대 음방 첫 1위 곡은 무엇인가요?',
+            answers: ['다시 만난 세계'],
+            correct: 0,
         };
 
         var question5 = {
-            question: '투바투의 뮤비 중 조회수가 가장 높은 뮤비는 무엇인가요?',
-            answers: ['세께가 불타버린 밤, 우린', '5시 3분의 하늘에서 발견한 너와 나', '9와 4분의 3의 승강장에서 너를 기다려', '어느 날 머리에서 뿔이 자랐다'],
+            question: '소녀시대가 처음으로 지상파 1위를 할수있도록 만들어준 노래는 무엇인가요?',
+            answers: ['소녀시대'],
             correct: 3,
         };
 
         var question6 = {
-            question: "투모로우바이투게더의 데뷔일을 기념하기 위해 빅히트에서 주최하는 축제는 무엇인가요?",
-            answers: ['wishes season', 'today', 'dream week'],
+            question: '소녀시대 뮤비 중 조회수가 가장 높은 뮤비는 무엇인가요?',
+            answers: ['gee'],
             correct: 2,
         };
 
         var question7 = {
-            question: "'단짝즈' 케미를 보여준 투바투 맴버들은 누구인가요?",
-            answers: ['태현&휴닝카이', '연준&범규', '범규&휴닝카이', '수빈&범규'],
-            correct: 3,
+            question: '소녀시대는 언제 처음으로 멜론 뮤직 어워드에서 올해의 가수상을 받았나요?',
+            answers: ['2007년', '2008년', '2009년', '2010년'],
+            correct: 2,
         };
 
         // create an array of objects
