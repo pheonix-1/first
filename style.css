@@ -208,3 +208,16 @@ h1 {
     font-family: var(--google-fonts);
     font-size: 24px;
 }
+
+.nothing {
+    padding-top: 5%;
+    padding-bottom: 5px;
+}
+
+.bottom {
+    background-color: black;
+    color: var(--white-color);
+    text-align: center;
+    padding-bottom: 5px;
+
+}
