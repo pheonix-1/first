@@ -8,12 +8,12 @@
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-607ed432614148b9"></script>
     <link rel="stylesheet" href="quiz.css">
-    <title>소녀시대 퀴즈</title>
+    <title>위너 퀴즈</title>
 </head>
 
 <body>
     <h1><a href="https://sheck.netlify.app"><button id="home"><span>S</span><span>h</span><span>e</span><span>c</span><span>k</span></button></a></h1>
-    <h2 class="quiz-name">나는 소녀시대를 얼마나 알까?</h2>
+    <h2 class="quiz-name">나는 위너를 얼마나 알까?</h2>
     <div class="main">
         <!-- Number of Question  -->
         <div class="wrapper" id="pages"><span id="quizNumber">1</span><span>/7</span></div>
@@ -54,8 +54,8 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
         })();
     </script>
     <noscript>Please enable JavaScript to view the
-        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-    </noscript>
+        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
@@ -67,44 +67,44 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
         // Creating questionss and answers
         //*****************************************************************************
         var question1 = {
-            question: '소녀시대의 데뷔일은 언제인가요?',
-            answers: ['2007년 8월 5일', '2007년 8월 6일', '2007년 8월 7일', '2007년 8월 8일'],
+            question: '위너의 데뷔일은 언제인가요?',
+            answers: ['2018년 3월 25일', '2018년 3월 26일', '2018년 3월 27일', '2018년 3월 28일'],
             correct: 0,
         };
 
         var question2 = {
-            question: '소녀시대의 데뷔곡은 무엇인가요',
-            answers: ['Gee', '소녀시대', '다시 만난 세계', '소원을 말해봐'],
+            question: '스키즈의 데뷔곡은 무엇인가요',
+            answers: ['hellavator', 'my pace', 'district 9', 'mirror'],
             correct: 2,
         };
 
         var question3 = {
-            question: '소녀시대의 리더는 누구인가요?',
-            answers: ['써니', '태연', '효연', '티파니'],
+            question: '샤이니의 리더는 누구인가요?',
+            answers: ['창빈', '방찬', '한', '리노'],
             correct: 1,
         };
 
         var question4 = {
-            question: '소녀시대 음방 첫 1위 곡은 무엇인가요?',
-            answers: ['Gee', '소녀시대', '다시 만난 세계', '소원을 말해봐'],
-            correct: 2,
-        };
-
-        var question5 = {
-            question: '소녀시대가 처음으로 지상파 가요 프로그램에서 1위를 할수있도록 만들어준 노래는 무엇인가요?',
-            answers: ['Gee', '소녀시대', '다시 만난 세계', '소원을 말해봐'],
-            correct: 1,
-        };
-
-        var question6 = {
-            question: '소녀시대 뮤비 중 조회수가 가장 높은 뮤비는 무엇인가요?',
-            answers: ['gee', 'the boys', 'I got a boy', '몰랐니'],
+            question: '스키즈 음방 첫 1위 곡은 무엇인가요?',
+            answers: ['미로', 'district 9', '신매뉴', '바람'],
             correct: 0,
         };
 
+        var question5 = {
+            question: '스키즈의 뮤비 중 조회수가 가장 높은 뮤비는 무엇인가요?',
+            answers: ['back door', 'miroh', 'my pace', '신 매뉴'],
+            correct: 3,
+        };
+
+        var question6 = {
+            question: '스키즈에는 외국인 맴버가 며명 있나요?',
+            answers: ['1', '2', '3', '4'],
+            correct: 1,
+        };
+
         var question7 = {
-            question: '소녀시대가 처음으로 멜론 뮤직 어워드에서 올해의 가수상을 받은 연도는 언제인가요?',
-            answers: ['2007년', '2008년', '2009년', '2010년'],
+            question: '스키즈 맴버들이 가장 많이 갖고 있는 혈액형은 무엇인가요?',
+            answers: ['A', 'B', 'O', 'AB'],
             correct: 2,
         };
 
@@ -224,7 +224,7 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
 
             // check that an answer has been selected
             if (selectedItem == undefined) {
-                alert('정답을 골라주세요!   ');
+                alert('정답을 골라주세요!');
                 return;
             } else {
                 // get user answer if form of text

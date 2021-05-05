@@ -119,6 +119,7 @@ a {
 
 li {
     font-weight: 600;
+    list-style: none;
 }
 
 .search-box,
@@ -219,5 +220,8 @@ h1 {
     color: var(--white-color);
     text-align: center;
     padding-bottom: 5px;
+}
 
+.want {
+    padding-top: 1%;
 }
