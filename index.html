@@ -75,12 +75,12 @@
             <li id="list" class="list-group-item"><a href="twice.html">트와이스</a></li>
             <li id="list" class="list-group-item"><a href="snsd.html">소녀시대</a></li>
             <li id="list" class="list-group-item"><a href="">잇지</a></li>
-            <li id="list" class="list-group-item"><a href="">NCT</a></li>
+            <li id="list" class="list-group-item"><a href="nct.html">NCT</a></li>
             <li id="list" class="list-group-item"><a href="">에스파</a></li>
             <li id="list" class="list-group-item"><a href="">레드벨벳</a></li>
             <li id="list" class="list-group-item"><a href="seventeen.html">세븐틴</a></li>
             <li id="list" class="list-group-item"><a href="shinee.html">샤이니</a></li>
-            <li id="list" class="list-group-item"><a href="">위너</a></li>
+            <li id="list" class="list-group-item"><a href="winner.html">위너</a></li>
             <li id="list" class="list-group-item"><a href="">오마이걸</a></li>
             <li id="list" class="list-group-item"><a href="">에이핑크</a></li>
             <li id="list" class="list-group-item"><a href="">갓세븐</a></li>
@@ -142,7 +142,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
-        $("#myInput").on("keyup", function () {
+        $("#myInput").on("change", function () {
             var value = $(this).val().toLowerCase();
             $("#option li").filter(function () {
                 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
